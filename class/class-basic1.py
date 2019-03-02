@@ -39,6 +39,8 @@ class Student:
         else:
             print("the studenet's id isn't existed")
 
+
+
 if __name__ == '__main__':
     a = Account('123-123-123', 'George')
     print(a.number)
@@ -62,3 +64,8 @@ if __name__ == '__main__':
     s.set_weight('F001', 78)
     s.set_weight('F002', 100) # not found.
     print(s.weight)
+
+    # del = delete
+    del s.weight # delete the property of object.
+    print(s) # <__main__.Student object at 0x00000284EEBAFF60>
+    del s # delete the object.

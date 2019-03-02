@@ -9,6 +9,8 @@ print(t)
 print(type(t)) # tuple
 
 print(t[0]) # apple
+print(t[1]) # banana
+print(t[3]) # organe
 res = t.count('apple')
 print(res) # 1
 
