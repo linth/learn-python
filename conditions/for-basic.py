@@ -27,3 +27,9 @@ fruits = ['apple', 'banana', 'cherry']
 for x in adj:
     for y in fruits:
         print('the pair of word is {0}, {1}'.format(x, y))
+
+# example 4: print index and value of list in for loop.
+nums = [2, 7, 11, 15]
+for index, val in enumerate(nums):
+    print('the index: {0}, the value: {1}'.format(index, val))
+    
