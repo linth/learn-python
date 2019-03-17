@@ -5,6 +5,8 @@ i = 1
 while i < 6:
     print('the value of i equals to {}'.format(i))
     i += 1
+else:
+    print('the value of i is larger than 6.')
 
 # example 2: check the number is less than 3 and close/continue the program with break/continue
 j = 1
@@ -30,4 +32,14 @@ while len(nums) > 0:
 print('the even of nums is {}'.format(even))
 print('the odd of nums is {}'.format(odd))
 
-# example 4: 
+# example 4: 9X9 using while loop.
+k = 1
+l = 1
+while k < 10:
+    while l < 10:
+        print('{} x {} = {}'.format(k, l, k*l))
+        l += 1
+    l = 1
+    k += 1
+
+# example 5: 

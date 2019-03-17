@@ -32,4 +32,19 @@ for x in adj:
 nums = [2, 7, 11, 15]
 for index, val in enumerate(nums):
     print('the index: {0}, the value: {1}'.format(index, val))
-    
+
+# example 5: 9x9 using for "for loop".
+# method 1
+for i in range(1, 10):
+    for j in range(1, 10):
+        # print('{0} x {1} = {2}'.format(i, j, i*j))
+        pass
+# method 2
+# j = 1
+for i in range(1, 10):
+    j = 1
+    while j < 10:
+        # print('{0} x {1} = {2}'.format(i, j, i*j))
+        j += 1
+
+# mtehod 3

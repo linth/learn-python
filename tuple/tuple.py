@@ -26,3 +26,14 @@ print(res) # 3
 '''
 res = t.index('cherry')
 print(res) # 2
+
+# example 1:
+languages = "python", "js", "go"
+p = ["python", "js", "go"]
+a = "psss"
+
+print('languages have {}'.format(languages))
+print(type(languages))
+print(type(p))
+print(type(a))
+# tuple =
