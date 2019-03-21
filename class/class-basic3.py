@@ -34,6 +34,6 @@ if __name__ == '__main__':
     b.show_print()
     print("(" + b.get_value() + ")")
 
-    c = B(1, 3)
+    c = B(1, 3, 2)
     c.show_print()
     print(c.get_value())

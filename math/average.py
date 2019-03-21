@@ -15,9 +15,24 @@ def factorial(num):
         raise Exception('can\'t be floating point or negative.')
     return 1 if num == 0 else num * factorial(num-1)
 
+def max_n(list, n=1, reverse=True):
+    return sorted(list, reverse=reverse)[:n]
+
+from copy import deepcopy
+
+def min_n(list, n=1):
+    number = deepcopy(list)
+    number.sort()
+    return number[:n]
+
 if __name__ == '__main__':
     list = [1, 2, 3]
     s = average(*list)
     print(s)
-
     print(factorial(6))
+
+    print(max_n([1, 2, 3])) # [3]
+    print(max_n([1, 2, 3], 2)) # [3, 2]
+
+    print(min_n([1, 2, 3])) # [3]
+    print(min_n([1, 2, 3], 2)) # [3, 2]
