@@ -1,4 +1,4 @@
-
+import copy
 
 class Point:
 
@@ -36,6 +36,14 @@ class Point3D(Point):
         self.z = z
 
 
+def check_the_object_sameness(point1, point2):
+    ''' Sameness'''
+    if point1 is point2:
+        print('point1: ({} {}) and point2: ({} {}) are the same.'.format(point1.x, point1.y, point2.x, point2.y))
+    else:
+        print('point1: ({} {}) and point2: ({} {}) aren\'t the same.'.format(point1.x, point1.y, point2.x, point2.y))
+
+
 if __name__ == '__main__':
     p = Point() # this is a point class (0, 0)
     print(p) # x = 0, y = 0
@@ -54,3 +62,14 @@ if __name__ == '__main__':
     s = Point3D()
     s.x, s.y, s.z = 10, 10, 10
     print('({}, {}, {})'.format(s.x, s.y, s.z)) # (10, 10, 10)
+
+    p1 = Point()
+    p2 = p1
+    check_the_object_sameness(p1, p2) # point1: (0 0) and point2: (0 0) are the same.
+    p1, p2 = Point(), Point()
+    check_the_object_sameness(p1, p2) # point1: (0 0) and point2: (0 0) aren't the same.
+
+    # copying.
+    p3 = Point(8, 7)
+    p4 = copy.copy(p3)
+    check_the_object_sameness(p3, p4) # point1: (8 7) and point2: (8 7) aren't the same.
