@@ -7,7 +7,7 @@ class A:
         self.y = y
 
     def show_print(self):
-        print('x-axis is {0}; y-axis is {1}'.format(self.x, self.y))
+        print('class A: x-axis is {0}; y-axis is {1}'.format(self.x, self.y))
 
     def get_value(self):
         return "%s, %s" % (self.x, self.y)
@@ -15,12 +15,13 @@ class A:
 
 class B(A):
     def __init__(self, x, y, z):
-        super(B, self).__init__(x, y)
+        # super(B, self).__init__(x, y) # for python 2.7
+        super().__init__(x, y) # for python 3
         self.z = z
 
     def show_print(self):
         # super(B, self).show_print()
-        print('x-axis is {0}; y-axis is {1}; z-axis is {2}'.format(self.x, self.y, self.z))
+        print('class B: x-axis is {0}; y-axis is {1}; z-axis is {2}'.format(self.x, self.y, self.z))
 
     def get_value(self):
         return "%s, %s, %s" % (self.x, self.y, self.z)
