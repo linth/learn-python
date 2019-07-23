@@ -1,3 +1,7 @@
+'''
+http://openbookproject.net/thinkcs/python/english3e/functions.html
+'''
+
 import turtle
 
 def draw_square(t, sz):
@@ -35,7 +39,6 @@ def scenario2():
         tess.forward(10)
         tess.right(18)
     wn.mainloop()
-
 
 def main():
     scenario1()
