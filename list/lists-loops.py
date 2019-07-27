@@ -27,6 +27,11 @@ def example2():
 
 def example3():
     list = [5, 27, 3, 11]
+
+    # append method.
+    list.append(5)
+    print('list = {}'.format(list)) # list = [5, 27, 3, 11, 5]
+
     # insert [index, value]
     list.insert(1, 11)
     print('After inserting the list = {}'.format(list)) # After inserting the list = [5, 11, 27, 3, 11]
