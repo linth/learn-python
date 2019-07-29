@@ -50,11 +50,34 @@ def example1():
     # file-like object => dict (反序列化)
 
 
+def example2():
+    # object => JSON string.
+    data = [{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]
+    res = json.dumps(data)
+    print('The type of data is {}.'.format(type(data))) # The type of data is <class 'list'>.
+    print('The type of res is {}.'.format(type(res))) # The type of res is <class 'str'>.
+    print('The res = {}.'.format(res)) # The res = [{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}].
+
+    res2 = json.loads(res)
+    print('The type of res2 is {}.'.format(type(res2))) # The type of res2 is <class 'list'>.
+    print('From res to res2, the res2 = {}'.format(res2)) # From res to res2, the res2 = [{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}]
+
+    f = open('ex2-json.txt', 'wb')
+    res2 = json.loads((res))
+    f.close()
+
+
+def example3():
+    jsonData = '{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}'
+    res = json.loads((jsonData))
+    print('The type of res is {}.'.format(type(res)))
+
 def main():
     # object_to_json_string()
     # json_string_to_file()
-    example1()
-
+    # example1()
+    example2()
+    example3()
 
 if __name__ == '__main__':
     main()
