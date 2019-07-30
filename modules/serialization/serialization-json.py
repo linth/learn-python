@@ -2,6 +2,7 @@
 Reference:
     - https://www.liaoxuefeng.com/wiki/1016959663602400/1017624706151424
     - https://ithelp.ithome.com.tw/articles/10187407
+    - https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/356804/
 
 Keyword:
     - bytes
@@ -68,16 +69,47 @@ def example2():
 
 
 def example3():
-    jsonData = '{"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}'
-    res = json.loads((jsonData))
-    print('The type of res is {}.'.format(type(res)))
+    name_emb = {'a':'1111','b':'2222','c':'3333','d':'4444'}
+    print('The name_emb = {}, and the type of name_emb is {}.'.format(name_emb, type(name_emb))) # The name_emb = {'a': '1111', 'b': '2222', 'c': '3333', 'd': '4444'}, and the type of name_emb is <class 'dict'>.
+
+    # json.dumps()用於將dict型別的資料轉成str
+    jsObj = json.dumps(name_emb)
+    print('The jsObj = {}, and the type of jsObj is {}.'.format(jsObj, type(jsObj))) # The jsObj = {"a": "1111", "b": "2222", "c": "3333", "d": "4444"}, and the type of jsObj is <class 'str'>.
+
+    # json.loads()用於將str型別的資料轉成dict
+    jsLoads = json.loads(jsObj)
+    print('The jsLoads = {}, and the type of jsLoads is {}.'.format(jsLoads, type(jsLoads)))
+
+
+def example4():
+    name_emb = {'a':'1111','b':'2222','c':'3333','d':'4444'}
+
+    # json.dump()用於將dict型別的資料轉成str，並寫入到json檔案中。
+    # method 1.
+    jsObj = json.dumps(name_emb)
+    with open('example4.json', 'w') as f:
+        f.write(jsObj)
+        f.close()
+
+    # method 2.
+    json.dump(name_emb, open('example4.json', 'w'))
+
+
+def example5():
+    example5 = ('example4.json')
+    # json.load()用於從json檔案中讀取資料。
+    jsObj = json.load(open(example5))
+    print('The jsObj = {}, and the type of jsObj is {}.'.format(jsObj, type(jsObj)))
+
 
 def main():
     # object_to_json_string()
     # json_string_to_file()
     # example1()
-    example2()
-    example3()
+    # example2()
+    # example3()
+    # example4()
+    example5()
 
 if __name__ == '__main__':
     main()
