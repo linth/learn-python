@@ -1,6 +1,7 @@
 '''
 Reference:
     - https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080
+    - https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080
 '''
 
 from functools import reduce
@@ -27,9 +28,14 @@ def use_map():
 
 
 def use_reduce():
+    # use the reduce function to calcuate the value of sum.
     arr = [1, 3, 5, 7, 9]
     res = reduce(add, arr)
-    print('The res = {} by using the reduce function.'.format(res))
+    print('The res = {} by using the reduce function.'.format(res)) # The res = 25 by using the reduce function.
+
+    # you can also use the function of sum.
+    res1 = sum(arr)
+    print('The res1 = {} by using the sum function.'.format(res1)) # The res1 = 25 by using the sum function.
 
 
 def main():
