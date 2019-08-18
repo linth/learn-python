@@ -28,6 +28,12 @@ def example4():
     # greeting[0] = 'J' # error
     print('The string greeting is {}.'.format(greeting))
 
+
+def example5():
+
+    people = []
+
+
 def main():
     # example1()
     # example2()
