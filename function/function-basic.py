@@ -2,11 +2,14 @@
     function
 '''
 
+
 def function():
     print('Hello world.')
 
+
 def add(x, y):
     return x + y
+
 
 def add(*args):
     sum = 0
@@ -14,12 +17,15 @@ def add(*args):
         sum += i
     return sum
 
+
 def show_kwargs(**kwargs):
     print(kwargs)
+
 
 def show_values(**kwargs):
     for key, value in kwargs.items():
         print('the value of {} is {}'.format(key, value))
+
 
 def example1(args1, args2, *args, **kwargs):
     print('args1', args1)
@@ -37,7 +43,7 @@ if __name__ == '__main__':
     x = add(1, 2, 3, 4, 5)
     print('x', x) # 15
 
-    show_kwargs(name='George', id='F0001', sex='boy') # {'name': 'George', 'id': 'F0001', 'sex': 'boy'}
+    show_kwargs(name='George', id='F0001', sex='boy')   # {'name': 'George', 'id': 'F0001', 'sex': 'boy'}
 
     # the value of name is George
     # the value of id is F0001

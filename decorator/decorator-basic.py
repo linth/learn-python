@@ -16,6 +16,7 @@ handler = logging.StreamHandler()
 handler.setLevel(logging.DEBUG)
 logger.addHandler(handler)
 
+
 def timed(logger, level=None, format='%s: %s sec'):
     if level is None:
         level = logging.DEBUG
@@ -31,14 +32,41 @@ def timed(logger, level=None, format='%s: %s sec'):
         return inner
     return decorator
 
-@timed(logger)
+
+def timed_without_arg(func):
+    def decorator(*args):
+        start_time = time.time()
+        res = func(*args)
+        end_time = time.time()
+        print('The executing time = {}'.format(end_time - start_time))
+        return res
+    return decorator
+
+
+def decorator_params(fruit):    # outer function
+    def timed_with_arg(func):
+        def decorator(*args):   # inner function
+            print(args, fruit)
+        return decorator
+    return timed_with_arg
+
+
+@timed_without_arg
 def pow10(x):
-    for i in range(1000):
+    for i in range(x):
+        print(i)
+
+
+@decorator_params('banana')
+def pow20(x):
+    for i in range(x):
         print(i)
 
 
 def main():
-    pow10(100000) # DEBUG:root:<function pow10 at 0x000001D030F8A400>: 0.003988742828369141 sec
+    pow10(1000) # DEBUG:root:<function pow10 at 0x000001D030F8A400>: 0.003988742828369141 sec
+    pow20(2000) # The executing time = 0.0031440258026123047, (2000,) banana
+
 
 if __name__ == '__main__':
     main()

@@ -13,7 +13,6 @@ reference:
     - https://leetcode.com/problems/two-sum/
 '''
 
-
 def first_time(*args):
     # Time complexity is O(n^2)
     # Space complexity is O(1)

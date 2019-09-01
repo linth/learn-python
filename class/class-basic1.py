@@ -22,6 +22,7 @@ class Account:
         else:
             raise RuntimeError('the balance is not enough.')
 
+
 # student example.
 class Student:
     # init:
@@ -37,8 +38,7 @@ class Student:
         if self.id == id:
             self.weight = weight
         else:
-            print("the studenet's id isn't existed")
-
+            print("the studenet\'s id isn't existed")
 
 
 if __name__ == '__main__':
@@ -52,7 +52,6 @@ if __name__ == '__main__':
     a.withdraw(100)
     print('the balance value is %s' % (a.balance))
 
-
     s = Student('F001', 'George')
     print(s.id)
     print(s.name)
@@ -62,10 +61,10 @@ if __name__ == '__main__':
     print(s.height)
 
     s.set_weight('F001', 78)
-    s.set_weight('F002', 100) # not found.
+    s.set_weight('F002', 100)   # not found.
     print(s.weight)
 
     # del = delete
-    del s.weight # delete the property of object.
-    print(s) # <__main__.Student object at 0x00000284EEBAFF60>
-    del s # delete the object.
+    del s.weight    # delete the property of object.
+    print(s)    # <__main__.Student object at 0x00000284EEBAFF60>
+    del s   # delete the object.
