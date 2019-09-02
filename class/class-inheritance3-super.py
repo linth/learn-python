@@ -12,6 +12,7 @@ class Car:  # first way.
     def __str__(self):
         return '[Car Class] wheels = {}, door = {}, passengers = {}'.format(self.wheels, self.door, self.passengers)
 
+
 class Car2: # second way.
     def __init__(self):
         self.wheels = 4

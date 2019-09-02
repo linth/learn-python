@@ -11,6 +11,7 @@ return [0, 1].
 
 reference:
     - https://leetcode.com/problems/two-sum/
+    - https://blog.techbridge.cc/2019/08/30/leetcode-pattern-two-pointer/
 '''
 
 def first_time(*args):
