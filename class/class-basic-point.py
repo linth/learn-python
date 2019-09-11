@@ -1,5 +1,5 @@
 import copy
-
+import math
 
 class Point:
     def __init__(self, x=0, y=0):
@@ -36,14 +36,31 @@ class Line(Point):
 
 
 class Point3D(Point):
-    def __init__(self, z=0):
-        super().__init__()
+    def __init__(self, x, y, z=0):
+        super().__init__(x, y)
         self.z = z
         # print('[Point3D] x = {}, y = {}, z = {}'.format(self.x, self.y, self.z))
 
     def __str__(self):
         return '[Point3D Class]: ({}, {}, {})'.format(self.x, self.y, self.z)
 
+    def distance_3d_form_origin(self):
+        x = self.x - 0
+        y = self.y - 0
+        z = self.z - 0
+        return math.sqrt(x ** 2 + y ** 2 + z ** 2)
+
+    def is_over_three(self, *args):
+        print('args', args)
+        print('args', args)
+        # if len(args) == 3:
+        #     p3d = Point3D(args)
+        #     if p3d.distance_3d_form_origin() > 3:
+        #         return True
+        #     else:
+        #         return False
+        # else:
+        #     print('The parameters are something wrong.')
 
 def check_the_object_sameness(point1, point2):
     # Sameness
@@ -63,34 +80,34 @@ def example_class():
 
 
 if __name__ == '__main__':
-    p = Point()     # this is a point class (0, 0)
-    print(p)        # x = 0, y = 0
-    print('x = {}, y = {}'.format(p.x, p.y))    # 10 10
+    # p = Point()     # this is a point class (0, 0)
+    # print(p)        # x = 0, y = 0
+    # print('x = {}, y = {}'.format(p.x, p.y))    # 10 10
 
-    p.x, p.y = 10, 10
-    print(p.distance_from_origin())     # 14.142135623730951
+    # p.x, p.y = 10, 10
+    # print(p.distance_from_origin())     # 14.142135623730951
+    #
+    # q = Point()
+    # r = Point()
+    # r.x = 10
+    # r.y = 10
+    # res = q.midpoint(r)
+    # print(res.x, res.y) # 5.0 5.0
+    #
+    # s = Point3D()
+    # s.x, s.y, s.z = 10, 10, 10
+    # print('({}, {}, {})'.format(s.x, s.y, s.z)) # (10, 10, 10)
 
-    q = Point()
-    r = Point()
-    r.x = 10
-    r.y = 10
-    res = q.midpoint(r)
-    print(res.x, res.y) # 5.0 5.0
-
-    s = Point3D()
-    s.x, s.y, s.z = 10, 10, 10
-    print('({}, {}, {})'.format(s.x, s.y, s.z)) # (10, 10, 10)
-
-    p1 = Point()
-    p2 = p1
-    check_the_object_sameness(p1, p2) # point1: (0 0) and point2: (0 0) are the same.
-    p1, p2 = Point(), Point()
-    check_the_object_sameness(p1, p2) # point1: (0 0) and point2: (0 0) aren't the same.
-
-    # copying.
-    p3 = Point(8, 7)
-    p4 = copy.copy(p3)
-    check_the_object_sameness(p3, p4) # point1: (8 7) and point2: (8 7) aren't the same.
+    # p1 = Point()
+    # p2 = p1
+    # check_the_object_sameness(p1, p2) # point1: (0 0) and point2: (0 0) are the same.
+    # p1, p2 = Point(), Point()
+    # check_the_object_sameness(p1, p2) # point1: (0 0) and point2: (0 0) aren't the same.
+    #
+    # # copying.
+    # p3 = Point(8, 7)
+    # p4 = copy.copy(p3)
+    # check_the_object_sameness(p3, p4) # point1: (8 7) and point2: (8 7) aren't the same.
 
     '''
         Results: 
@@ -98,4 +115,10 @@ if __name__ == '__main__':
             [Line Class]: (0, 0) to (0, 0)
             [Point3D Class]: (0, 0, 0)
     '''
-    example_class()
+    # example_class()
+
+    arr = (1, 2, 3)
+    p3d = Point3D(1, 2, 3)
+    res = p3d.distance_3d_form_origin()
+    res2 = p3d.is_over_three(p3d)
+    print(p3d, res, res2)

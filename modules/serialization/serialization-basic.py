@@ -1,6 +1,7 @@
 '''
 Reference:
     - https://www.liaoxuefeng.com/wiki/1016959663602400/1017624706151424
+    - https://docs.python-guide.org/scenarios/serialization/
 '''
 import pickle
 
