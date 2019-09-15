@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="010888ce-bdbb-4600-8fc2-f40a2412eeaf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/class/class-static-classmethod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern/factory/factory-basic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/class-basic-point.py" beforeDir="false" afterPath="$PROJECT_DIR$/class/class-basic-point.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/serialization/serialization-basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/serialization/serialization-basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/class-static-classmethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/class/class-static-classmethod.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,24 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/serialization/serialization-basic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/hashlib/test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/class-inheritance3-super.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,11 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/class-static-classmethod.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="210">
+              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/design_pattern/factory/factory-basic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="149" selection-start-line="5" selection-start-column="149" selection-end-line="5" selection-end-column="149" />
             </state>
           </provider>
         </entry>
@@ -170,7 +160,9 @@
         <option value="$PROJECT_DIR$/leetcode/no_1-two-sum.py" />
         <option value="$PROJECT_DIR$/modules/serialization/serialization-basic.py" />
         <option value="$PROJECT_DIR$/class/class-basic-point.py" />
+        <option value="$PROJECT_DIR$/design_pattern/factory/factory.py" />
         <option value="$PROJECT_DIR$/class/class-static-classmethod.py" />
+        <option value="$PROJECT_DIR$/design_pattern/factory/factory-basic.py" />
       </list>
     </option>
   </component>
@@ -194,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,27 +207,13 @@
             <path>
               <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="conditions" type="462c0819:PsiDirectoryNode" />
+              <item name="design_pattern" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="decorator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="for-loop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="function" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="design_pattern" type="462c0819:PsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
@@ -253,33 +232,10 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="process-thread" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="serialization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="time" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="set" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-python" type="462c0819:PsiDirectoryNode" />
-              <item name="tuple" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,11 +396,11 @@
     <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20372398" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20372398" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -460,9 +416,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/logging/mixins1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/logging/example1.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -510,13 +463,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/celery/tasks.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/programming_note/type-check/type-check-basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/logging/logging-basic.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -656,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/class-basic1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmEdu2019.1/system/python_stubs/-761115144/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -691,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/hash_table_basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/no_1-two-sum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -723,6 +655,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programming_note/type-check/type-check-basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithm/hash_table_basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/class-basic1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -772,8 +725,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class/class-static-classmethod.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="210">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design_pattern/factory/factory-basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="149" selection-start-line="5" selection-start-column="149" selection-end-line="5" selection-end-column="149" />
         </state>
       </provider>
     </entry>
