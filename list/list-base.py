@@ -1,7 +1,7 @@
 '''
     basic list.
 '''
-
+# example 1: print information.
 def ex1():
     # list []
     list1 = ['george', 'mary', 2019, 100]
@@ -12,7 +12,7 @@ def ex1():
     print(list1[1:3]) # ['mary', 2019]
     print(list2)
 
-
+# example 2: add data.
 def ex2():
     # add, update, delete
     list = []
@@ -23,6 +23,7 @@ def ex2():
     del list1[2]
     print(list1) # ['george', 'mary', 100]
 
+# example 3: use len, count, insert, reverse, etc.
 def ex3():
     list1 = ['george', 'mary', 2019, 100]
     list2 = [1, 2, 3, 4, 5]
