@@ -1,3 +1,13 @@
 DEBUG:root:the message shoild go to the log file.
 INFO:root:So should this
 WARNING:root:And this, too
+DEBUG:root:the message shoild go to the log file.
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:root:the message shoild go to the log file.
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:root:The function: add is executing.
+DEBUG:root:The function: subtract is executing.
+DEBUG:root:The function: multiply is executing.
+DEBUG:root:The function: divide is executing.

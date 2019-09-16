@@ -4,7 +4,7 @@ class Human:
         self.height = h
         self.weight = w
 
-    def BMI(self):
+    def bmi(self):
         return self.weight / ((self.height/100)**2)
 
 
@@ -15,11 +15,11 @@ class Woman(Human):
         self.waist = waist
         self.hip = hip
 
-    def printBWH(self):
+    def print_bwh(self):
         print("bust={}, waist={}, hip={}".format(self.bust, self.waist, self.hip))
 
 
 if __name__ == '__main__':
     w = Woman(165, 54, 83, 64, 84)
-    print(w.BMI())
-    w.printBWH()
+    print(w.bmi())
+    w.print_bwh()

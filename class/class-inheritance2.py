@@ -7,9 +7,11 @@ class A(object):
     def method2(self):
         print("A's method 2")
 
+
 class B(A):
     def method3(self):
         print("B's method 3")
+
 
 class C(A):
     def method2(self):
@@ -17,6 +19,7 @@ class C(A):
 
     def method3(self):
         print("C's method 3")
+
 
 class D(B, C):
     def method4(self):
