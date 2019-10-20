@@ -29,13 +29,14 @@ def my_decorator(func):
     return wrapper
 
 
+@my_decorator
 def say_whee():
     print('Whee........')
 
 
-say_whee = my_decorator(say_whee)
+# say_whee = my_decorator(say_whee) # without syntactic sugar.
 
 if __name__ == '__main__':
-    parent(1)
+    # parent(1)
 
     say_whee()
