@@ -1,12 +1,15 @@
+from datetime import date
+
 '''
 References:
     - https://zhuanlan.zhihu.com/p/28010894
     - https://openhome.cc/Gossip/Python/StaticClassMethod.html
     - https://www.geeksforgeeks.org/classmethod-in-python/
+    - https://realpython.com/instance-class-and-static-methods-demystified/
 '''
-from datetime import date
 
 
+# example 1: student
 class Student:
     def __init__(self, name, age):
         self.name = name
@@ -34,6 +37,27 @@ class YmvsStudent(Student):
         super().__init__()
         self.id = student_id
 
+
+# example 2: static and class method.
+class MyClass:
+    def method(self):
+        ''' The first method on MyClass, called method, is a regular instance method.'''
+        print('MyClass method.')
+        return 'instance method called', self
+
+    @classmethod
+    def classmthod(cls):
+        ''' class methods take a cls parameter that points to the class—and not the object instance—when the method is called.'''
+        print('MyClass classmethod.')
+        return 'class method called', cls
+
+    @staticmethod
+    def staticmethod():
+        ''' This type of method takes neither a self nor a cls parameter (but of course it’s free to accept an arbitrary number of other parameters).'''
+        print('MyClass staticmethod.')
+        return 'static method called'
+
+
 if __name__ == '__main__':
     # ''' Case 1: you have to create the instance if you want to use the class. '''
     # s = Student('george', 15)
@@ -47,9 +71,20 @@ if __name__ == '__main__':
     #
     # ''' Case 3: use static method. '''
     # print(Student.is_adult(22))
-    s = Student('george', 20)
-    print(s.name, s.age)
-    y = YmvsStudent(1)
-    print(y.student_id)
 
+    # s = Student('george', 20)
+    # print(s.name, s.age)
+    # y = YmvsStudent(1)
+    # print(y.student_id)
+
+    m = MyClass()
+    # print(m, type(m))
+    # print(m.method(), type(m.method()))
+    m.method()
+    m.classmthod()
+    m.staticmethod()
+
+    MyClass.classmthod()
+    MyClass.staticmethod()
+    MyClass.method()    # error.
 
