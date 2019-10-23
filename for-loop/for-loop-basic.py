@@ -58,6 +58,7 @@ class Example:
         for i in range(arr_length):
             print('The index of arr is {}, and the element of arr is {}'.format(i, self.arr[i]))
 
+
 def main():
     # example1()
     # example2()
@@ -68,6 +69,7 @@ def main():
     e = Example(arr)
     # e.example1()
     e.example2()
+
 
 if __name__ == '__main__':
     main()
