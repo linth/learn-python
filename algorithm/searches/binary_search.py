@@ -23,3 +23,4 @@ if __name__ == '__main__':
         print('Element is present at index', res)
     else:
         print("Element is not present in array")
+
