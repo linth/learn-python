@@ -43,8 +43,33 @@ def use_date_as_index():
 
 def detect_the_value():
     print(scores > 84)
-
     print((scores > 60) & (scores < 96))
+
+
+def cal_scores():
+    new_score = scores**0.5 * 10
+    print('The new score equals to {}'.format(new_score))
+    return new_score
+
+
+def create_dataframe():
+    # array + dict
+    student = [
+        {'name': 'george', 'math': 90, 'chinese': 80},
+        {'name': 'may', 'math': 78, 'chinese': 50},
+        {'name': 'haha', 'math': 55, 'chinese': 30}
+    ]
+    student_df = pd.DataFrame(student)
+    print('student_df', student_df)
+
+    # pure dict by using from_dict
+    student2 = {
+        'name': ['george', 'may', 'haha'],
+        'chinese': [80, 50, 30],
+        'math': [90, 78, 55],
+    }
+    student2_df = pd.DataFrame.from_dict(student2)
+    print('student2_df', student2_df)
 
 
 if __name__ == '__main__':
@@ -58,3 +83,5 @@ if __name__ == '__main__':
     # use_list_as_index()
     use_date_as_index()
     detect_the_value()
+    cal_scores()
+    create_dataframe()
