@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="010888ce-bdbb-4600-8fc2-f40a2412eeaf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/list_filter_to_avoid_duplicated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/list_filter_to_avoid_duplicated.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/list_filter_to_avoid_duplicated.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetcode/list_filter_to_avoid_duplicated.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+            <state relative-caret-position="63">
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -699,8 +697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/list_filter_to_avoid_duplicated.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+        <state relative-caret-position="63">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="35" />
         </state>
       </provider>
     </entry>
