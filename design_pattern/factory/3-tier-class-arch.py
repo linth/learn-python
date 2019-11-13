@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-class Data(object):
 
+class Data(object):
     products = {
         'milk': {'price': 1.50, 'quantity': 10},
         'eggs': {'price': 0.20, 'quantity': 100},
@@ -15,7 +15,6 @@ class Data(object):
 
 
 class BusinessLogic(object):
-
     data = Data()
 
     def product_list(self):
