@@ -3,14 +3,16 @@ Reference:
     - https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080
     - https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080
 '''
-
 from functools import reduce
+
 
 def f(x):
     return x * x
 
+
 def add(x, y):
     return x + y
+
 
 def method1():
     arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -42,6 +44,7 @@ def main():
     method1()
     use_map()
     use_reduce()
+
 
 if __name__ == '__main__':
     main()
