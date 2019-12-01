@@ -3,10 +3,12 @@ Reference:
     - http://openbookproject.net/thinkcs/python/english3e/strings.html
 '''
 
+
 def use_upper_function():
     ss = "Hello world."
     res = ss.upper()
     print('The string becomes "{}"'.format(res))
+
 
 def example1():
     fruit = "banana"
@@ -17,6 +19,7 @@ def example1():
     print('The list of fruit is {}'.format(res)) # The list of fruit is ['b', 'a', 'n', 'a', 'n', 'a']
     res1 = list(enumerate(fruit))
     print('The list of fruit is {} by enumerate.'.format(res1)) # The list of fruit is [(0, 'b'), (1, 'a'), (2, 'n'), (3, 'a'), (4, 'n'), (5, 'a')] by enumerate.
+
 
 def example2():
     fruit = "banana"
