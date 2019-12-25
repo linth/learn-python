@@ -1,4 +1,7 @@
-
+"""
+References:
+    - https://realpython.com/python-exceptions/
+"""
 
 class Solution:
 
@@ -24,5 +27,9 @@ class Solution:
 
 
 if __name__ == '__main__':
-    s = Solution()
-    s.input_two_numbers()
+    # s = Solution()
+    # s.input_two_numbers()
+
+    a = [1, 2, 3, 1, 2, 3, 4, 1]
+    b = set(a)
+    print(b)

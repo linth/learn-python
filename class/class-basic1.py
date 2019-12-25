@@ -1,12 +1,12 @@
-'''
+"""
     class basic concept.
-'''
+"""
 
 
 # account example.
 class Account:
-    # init
     def __init__(self, number, name):
+        """ initial for account. """
         self.number = number
         self.name = name
         self.balance = 0
@@ -25,8 +25,8 @@ class Account:
 
 # student example.
 class Student:
-    # init:
     def __init__(self, id, name):
+        """ initial for student. """
         self.id = id
         self.name = name
         self.sex = ''

@@ -1,3 +1,10 @@
+"""
+References:
+    - https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/Python1a_OOP.html
+
+You will learn something as follows:
+    - class inheritance.
+"""
 
 
 # example 1: add function from x-y axis to x-y-z axis.
@@ -13,6 +20,17 @@ class A:
         return "%s, %s" % (self.x, self.y)
 
 
+class Rectangle(A):
+    def __init__(self, x=0, y=0):
+        super().__init__(x, y)
+#
+#
+# class Square(A):
+#     def __init__(self):
+#         # super().__init__(self, x=0, y=0)
+#         super().__init__()
+
+
 class B(A):
     def __init__(self, x, y, z):
         # super(B, self).__init__(x, y) # for python 2.7
@@ -26,15 +44,19 @@ class B(A):
     def get_value(self):
         return "%s, %s, %s" % (self.x, self.y, self.z)
 
+
 if __name__ == '__main__':
-    a = A(1, 2)
-    a.show_print()
-    print("(" + a.get_value() + ")")
+    # a = A(1, 2)
+    # a.show_print()
+    # print("(" + a.get_value() + ")")
+    #
+    # b = B(1, 2, 3)
+    # b.show_print()
+    # print("(" + b.get_value() + ")")
+    #
+    # c = B(1, 3, 2)
+    # c.show_print()
+    # print(c.get_value())
 
-    b = B(1, 2, 3)
-    b.show_print()
-    print("(" + b.get_value() + ")")
-
-    c = B(1, 3, 2)
-    c.show_print()
-    print(c.get_value())
+    r1 = Rectangle()
+    print(r1.show_print())
