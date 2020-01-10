@@ -8,12 +8,12 @@ class Process:
         print(f'The customer wants a {q}, please.')
         is_milk = input('Would you like milk and sugar with your coffee/tea (y/n)?')
         print(f'your anwser: {is_milk}')
-        self.is_tea_or_coffee(q)
+        self.is_tea_or_coffee(stuff=q)
 
-    def is_tea_or_coffee(self, kwargs):
-        if kwargs == 'tea':
+    def is_tea_or_coffee(self, **kwargs):
+        if kwargs['stuff'] == 'tea':
             self.make_tea()
-        elif kwargs == 'coffee':
+        elif kwargs['stuff'] == 'coffee':
             self.make_coffee()
         else:
             print('Not found.')
