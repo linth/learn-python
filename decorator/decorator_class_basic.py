@@ -1,7 +1,7 @@
-'''
+"""
 Reference:
     - https://www.geeksforgeeks.org/class-as-decorator-in-python/
-'''
+"""
 import logging
 
 logger = logging.getLogger()
