@@ -1,7 +1,8 @@
-'''
-    reference:
-    - https://www.brilliantcode.net/761/python-3-6-class/
-'''
+"""
+    Reference:
+        - https://www.brilliantcode.net/761/python-3-6-class/
+        -
+"""
 
 
 class Car:
@@ -52,6 +53,7 @@ if __name__ == '__main__':
     t = Toyota()
     t.passengers = 5
     t.door = 7
+    print(t.__dict__)   # use __dict__ can show the dict: key/value.
     print(t.wheels, t.door, t.passengers, t.brand_name, t.air_bag, t.sunroof)
     print(t > c) # True.
     print(t < c) # False.
@@ -59,3 +61,4 @@ if __name__ == '__main__':
     print(t != c) # True.
 
     print(t + c) # 11
+
