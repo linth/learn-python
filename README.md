@@ -1,6 +1,7 @@
 # learn-python
 learning python
 
+:heavy_check_mark:
 
 Topics  |   Description |
 ---------------------------|---------------------------------------------------------
