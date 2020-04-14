@@ -1,4 +1,4 @@
-'''
+"""
 No. 1 two sum
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -12,7 +12,8 @@ return [0, 1].
 reference:
     - https://leetcode.com/problems/two-sum/
     - https://blog.techbridge.cc/2019/08/30/leetcode-pattern-two-pointer/
-'''
+"""
+
 
 def first_time(*args):
     # Time complexity is O(n^2)
@@ -31,7 +32,7 @@ def first_time(*args):
                 if value + args[0]['nums'][i] == args[0]['target']:
                     # print([i, index])
                     return [i, index]
-        # print('---------')
+
 
 class Solution:
     def online1(self, nums, target):
@@ -51,8 +52,11 @@ class Solution:
             else:
                 return [d[n], index]
 
+
 def two_sum(*args):
     print('args = {}, the type of args = {}'.format(args, type(args)))
+
+
 def two_sum2(**kwargs):
     print('kwargs = {}, the type of kwargs = {}'.format(kwargs, type(kwargs)))
 
@@ -66,6 +70,7 @@ def main():
     # two_sum2(nums=[2, 7, 11, 15], target=9) # using kwargs as parameters.
 
     print('The res is {}, and the type of res is {}'.format(res, type(res)))
+
 
 if __name__ == '__main__':
     main()
