@@ -5,11 +5,18 @@ References:
 import sys
 
 
-def exception_ex1():
+def exception_ex1(x, y):
     """ use raise to throw an error when a certain condition occurs. """
-    x = 10
-    if x > 5:
-        raise Exception('x should not exceed 5. The value of x was: {}'.format(x))
+    try:
+        if x > y:
+            raise Exception(f'x is larger than y, the number is negative.')
+        elif x == y:
+            raise ValueError(f'please re-type again, the two numbers are the same.')
+        else:
+            print(f'[Result]: {y} - {x} = {y-x}')
+            return y - x
+    except Exception as e:
+        print('[Error]', e)
 
 
 def is_larger_than_10(num):
@@ -39,6 +46,6 @@ def is_negative(a, b):
 
 
 if __name__ == '__main__':
-    exception_ex1()
+    exception_ex1(8, 8)
     is_larger_than_10(11)
     # is_negative(1, []) # error
