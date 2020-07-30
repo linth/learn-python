@@ -5,30 +5,59 @@ References:
 import sys
 
 
-def exception_ex1(x, y):
-    """ use raise to throw an error when a certain condition occurs. """
+class SameValueError(Exception):
+    pass
+
+
+def exception_ex1(x: int, y: int) -> int:
+    """
+    use raise to throw an error when a certain condition occurs.
+    :param x:
+    :param y:
+    :return:
+    """
     try:
         if x > y:
             raise Exception(f'x is larger than y, the number is negative.')
         elif x == y:
-            raise ValueError(f'please re-type again, the two numbers are the same.')
+            raise SameValueError(f'please re-type again, the two numbers are the same.')
         else:
             print(f'[Result]: {y} - {x} = {y-x}')
             return y - x
+    except SameValueError as e:
+        print('[Error] SameValueError, ', e)
+    except ValueError as e:
+        print('[Error] ValueError, ', e)
     except Exception as e:
-        print('[Error]', e)
+        print('[Error] Exception, ', e)
 
 
-def is_larger_than_10(num):
-    """ use assert to check the condition turn or false."""
+def is_larger_than_10(num: int):
+    """
+    use assert to check the condition turn or false.
+    :param num:
+    :return:
+    """
     assert(num > 10)
 
 
-def sub(a, b):
+def sub(a: int, b: int) -> int:
+    """
+
+    :param a:
+    :param b:
+    :return:
+    """
     return a - b
 
 
-def is_negative(a, b):
+def is_negative(a: int, b: int):
+    """
+    check the sub value between "a" and "b" is negative or not.
+    :param a:
+    :param b:
+    :return:
+    """
     try:
         res = sub(a, b)
         if res < 0:
