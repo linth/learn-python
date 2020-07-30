@@ -6,7 +6,8 @@ import sys
 
 
 class SameValueError(Exception):
-    pass
+    def __init__(self, message: str):
+        self.message = message
 
 
 def exception_ex1(x: int, y: int) -> int:
@@ -25,7 +26,9 @@ def exception_ex1(x: int, y: int) -> int:
             print(f'[Result]: {y} - {x} = {y-x}')
             return y - x
     except SameValueError as e:
+        sv = SameValueError(e)
         print('[Error] SameValueError, ', e)
+        print('error message: ', sv.message)
     except ValueError as e:
         print('[Error] ValueError, ', e)
     except Exception as e:
