@@ -1,6 +1,7 @@
 """
 References
-- https://ithelp.ithome.com.tw/articles/10199408
+    - https://ithelp.ithome.com.tw/articles/10199408
+    - https://docs.python.org/3/library/asyncio-task.html
 """
 import asyncio
 
