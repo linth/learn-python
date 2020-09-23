@@ -21,8 +21,8 @@ def add_item():
     """
     s = {"apple", "banana", "cherry"}
     s.add("orange")
-    print('The set = {}'.format(s))
-    print('The length of set is {}'.format(len(s)))
+    print(f'The set = {s}')
+    print(f'The length of set is {s}')
 
 
 def remove_item():
@@ -32,7 +32,7 @@ def remove_item():
     """
     s = {"apple", "banana", "cherry"}
     s.remove("banana") # If the item to remove does not exist, remove() will raise an error.
-    print('After deleting the banana, the set becomes {}'.format(s)) # {'cherry', 'apple'}
+    print(f'After deleting the banana, the set becomes {s}') # {'cherry', 'apple'}
 
 
 def discard_item():
@@ -42,7 +42,7 @@ def discard_item():
     """
     s = {"apple", "banana", "cherry"}
     s.discard("banana") # If the item to remove does not exist, discard() will NOT raise an error.
-    print('After discarding the banana, the set becomes {}'.format(s)) # {'cherry', 'apple'}
+    print(f'After discarding the banana, the set becomes {s}') # {'cherry', 'apple'}
 
 
 def pop_item():
@@ -52,7 +52,7 @@ def pop_item():
     """
     s = {"apple", "banana", "cherry"}
     s.pop() # remove the lastest one.
-    print('Deleting the lastest one in the set, and the set is {}'.format(s)) # {'apple', 'orange'}
+    print(f'Deleting the lastest one in the set, and the set is {s}') # {'apple', 'orange'}
 
 
 def clear_item():
@@ -65,7 +65,7 @@ def clear_item():
     s.add('banana')
     s.add('cherry')
     s.clear() # empties the set
-    print('Clearing the set, and the set is {}'.format(s))
+    print(f'Clearing the set, and the set is {s}')
 
 
 def del_item():
