@@ -2,7 +2,7 @@
 Reference
     - https://docs.python.org/3.8/library/sched.html#sched.scheduler.enterabs
 """
-from color.IeColor import IeColor
+# from color.IeColor import IeColor
 import sched
 import time
 from datetime import datetime
@@ -10,13 +10,16 @@ from datetime import datetime
 
 def show_time(*args, **kwargs):
     # print(f'Time: {time.time()}')
-    print(IeColor.warning, 'datetime: ', datetime.now(),
-          f'args: {args}, kwargs: {kwargs}', IeColor.end)
+    # print(IeColor.warning, 'datetime: ', datetime.now(),
+    #       f'args: {args}, kwargs: {kwargs}', IeColor.end)
+    print('datetime: ', datetime.now(),
+          f'args: {args}, kwargs: {kwargs}')
 
 
 def show_time2():
     # print(f'Time2: {time.time()}')
-    print(IeColor.red, 'datetime: ', datetime.now())
+    # print(IeColor.red, 'datetime: ', datetime.now())
+    print(f'datetime: {datetime.now()}')
 
 
 def main():
