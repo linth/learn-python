@@ -17,7 +17,7 @@ def add(x: int, y: int) -> int:
 if __name__ == '__main__':
     print(f'app, {app.main}') # celery_example
     print(f'add, {add.name}') # celery_example.add
-    
+
     # res = add.delay(1, 2)
     # print('-->', res)
 
