@@ -6,10 +6,9 @@ Note:
     - make sure what's different between async and sync.
     - please check the process of async.
 """
-
+# from color.IeColor import IeColor
 import asyncio
 import time
-from color.IeColor import IeColor
 
 
 async def do_something(num: int):
@@ -18,9 +17,9 @@ async def do_something(num: int):
     :param num:
     :return:
     """
-    print(IeColor().pink, f'task {num}: the first step.', IeColor().end)
+    print(f'task {num}: the first step.')
     await asyncio.sleep(2)
-    print(IeColor().warning, f'task {num}: the second step.', IeColor().end)
+    print(f'task {num}: the second step.')
 
 
 def do_sync_something(num: int):
