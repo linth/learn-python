@@ -1,8 +1,8 @@
-'''
+"""
 References:
     - https://realpython.com/primer-on-python-decorators/
     - https://foofish.net/python-decorator.html
-'''
+"""
 import time
 import logging
 import functools
