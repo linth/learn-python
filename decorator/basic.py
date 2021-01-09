@@ -6,37 +6,55 @@ Reference:
 
 
 def my_decorator(func):
-    print('裝飾器加點料')
+    """
+    decorator function for printing the logging.
+    :param func: a function.
+    :return:
+    """
+    print(f'Starting the programming...')
+    print(f'Executing {func.__name__} function...')
     return func
 
 
 @my_decorator
-def my_function():
-    print('my_function 被裝飾函式執行')
+def f1():
+    # TODO: 當發生使用decorator時候，似乎會先暫存執行
+    print('f1() 被裝飾函式執行')
 
 
-def my_function2():
-    print('my_function2 被裝飾函式執行')
+@my_decorator
+def f2():
+    """ with decorator function. """
+    print('f2() 被裝飾函式執行')
 
 
-my_function()
-
-# *******************************************************************************
-# please note three kinds of method and think about what's different between them.
-# *******************************************************************************
-# Method 1:
-my_decorator(my_function2)
-# 裝飾器加點料
+def f3():
+    """ without decorator function. """
+    print('f3() 被裝飾函式執行')
 
 
-# Method 2:
-my_decorator(my_function2())
-# my_function2 被裝飾函式執行
-# 裝飾器加點料
+if __name__ == '__main__':
+    # basic method.
+    # f1()
 
+    # *******************************************************************************
+    # please note three kinds of method and think about what's different between them.
+    # *******************************************************************************
+    # Method 1:
+    # my_decorator(f1) # 裝飾器加點料
 
-# Method 3:
-o = my_decorator(my_function2)
-o()
-# 裝飾器加點料
-# my_function2 被裝飾函式執行
+    # Method 2:
+    # my_decorator(f2())
+    # my_function2 被裝飾函式執行
+    # 裝飾器加點料
+    # pass
+
+    # Method 3:
+    # o = my_decorator(f2())
+    # o()
+    # 裝飾器加點料
+    # my_function2 被裝飾函式執行
+
+    f1()
+    f2()
+    f3()

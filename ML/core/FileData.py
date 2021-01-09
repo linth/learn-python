@@ -79,7 +79,7 @@ class TextConvertToCsv(DataHandling):
         else:
             f.close()
 
-    def set_dest_file_url(self, dest_file_url):
+    def set_dest_file_url(self, dest_file_url: str):
         self.dest_file_url = dest_file_url
 
     def convert_data(self) -> None:
