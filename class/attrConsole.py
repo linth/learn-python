@@ -3,17 +3,22 @@ Goal: using `getattr`, `hasattr`, `setattr`, `delattr`,
 """
 
 class Person:
-    pass
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.gender = None
 
 
 class Woman(Person):
-    pass
+    def __init__(self, name, age):
+        super().__init__(name, age)
+        self.gender = 'girl'
 
 
 class Man(Person):
     def __init__(self, name, age):
-        self.name = name
-        self.age = age
+        super().__init__(name, age)
+        self.gender = 'boy'
 
 
 if __name__ == '__main__':
@@ -38,3 +43,5 @@ if __name__ == '__main__':
     except Exception as e:
         print(f'the error: ', e)
     
+    w = Woman('may', 40)
+    print(f'the name of woman: {w.name}, the age: {w.age}, the gender: {w.gender}')
