@@ -1,5 +1,5 @@
 """
-Goal: using `getattr`, `hasattr`, `setattr`, `delattr`, 
+Goal: using `getattr`, `hasattr`, `setattr`, `delattr`, `__getattribute__`
 """
 
 class Person:
@@ -45,3 +45,4 @@ if __name__ == '__main__':
     
     w = Woman('may', 40)
     print(f'the name of woman: {w.name}, the age: {w.age}, the gender: {w.gender}')
+    print(f"we want to get the attribute of w object: {w.__getattribute__('name')}")
