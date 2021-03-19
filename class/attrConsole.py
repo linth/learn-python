@@ -1,5 +1,10 @@
 """
 Goal: using `getattr`, `hasattr`, `setattr`, `delattr`, `__getattribute__`
+
+- getattr(object, attr)
+- setattr(object, attr, value)
+- delattr(object, attr)
+- object.__getattribute__(attr)
 """
 
 class Person:
