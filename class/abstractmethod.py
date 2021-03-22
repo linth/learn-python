@@ -12,6 +12,7 @@ class A(ABC):
 
 
 class B(ABC):
+    """ 需加入 @abstractmethod才可以確保繼承過的class需要實作method. """
     @abstractmethod
     def show(self):
         raise NotImplementedError('show() should be overridden.')
@@ -30,4 +31,5 @@ if __name__ == '__main__':
     # a.show()
     # TODO: please note the different between c and d as follows:
     c = C() # it's work.
-    d = D() # TypeError: Can't instantiate abstract class C with abstract methods show
+    # d = D() # TypeError: Can't instantiate abstract class C with abstract methods show
+

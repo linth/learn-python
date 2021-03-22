@@ -21,6 +21,7 @@ class Account:
 
 class CheckingAccount(Account):
     def __init__(self, id, name):
+        # Please check the code equals to `super().__init(id, name)` or not.
         super(CheckingAccount, self).__init__(id, name) # call parent class.
         self.overdraftlimit = 30000
 

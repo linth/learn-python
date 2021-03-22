@@ -1,4 +1,6 @@
 '''
+super() 可以承接父類別的相關屬性資料，或是可以覆寫method來修改功能
+
 References:
     - https://realpython.com/python-super/
 '''
@@ -24,6 +26,7 @@ class Square(Rectangle):
 
 class Cube(Square):
     def surface_are(self):
+        """ 可以使用新的function name來覆寫原本的功能 """
         face_are = super().area()
         return face_are * 6
 
@@ -62,5 +65,5 @@ if __name__ == '__main__':
     print('The perimeter of square is {}'.format(s.perimeter()))
 
     c = Cube(3)
-    print(c.surface_are())
-    print(c.volume())
+    print('the surface area of cube: ', c.surface_are())
+    print('the area of cube: ', c.volume())
