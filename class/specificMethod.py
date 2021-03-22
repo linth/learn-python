@@ -11,6 +11,17 @@ class Car:
         self.door = door
         self.passengers = passengers
 
+    def __eq__(self, other): # equal.
+        return self.door == other.door
+
+
+class Audi(Car):
+    def __init__(self):
+        super().__init__(4, 4, 4)
+
+    def __str__(self):
+        return f"[Audi] wheels: {self.wheels}, door: {self.door}, passengers: {self.passengers}"
+
 
 class Toyota(Car):
     def __init__(self, brand_name='', air_bag=2, sunroof=True):
@@ -46,11 +57,15 @@ class Toyota(Car):
 
 if __name__ == '__main__':
     c = Car()
-    print(c.wheels, c.door, c.passengers)
-    # print()
-    # print()
+    print('General car: ', c.wheels, c.door, c.passengers)
+    
+    a = Audi()
+    print('Audi\'s car: ', a.wheels, a.door, a.passengers)
+    print(a.__str__())
 
     t = Toyota()
+    print('Toyota\'s car: ', t.wheels, t.door, t.passengers)
+    print('compare with Audi\'s door and Toyota\'s door: ', a.door, t.door, a >= t)
     t.passengers = 5
     t.door = 7
     print(t.__dict__)   # use __dict__ can show the dict: key/value.
