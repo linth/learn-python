@@ -1,4 +1,4 @@
-'''
+"""
 No. 167. Two Sum II - Input array is sorted
 
 Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
@@ -16,10 +16,18 @@ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 
 reference:
     - https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-'''
+"""
+from typing import List
 
-class Solution():
+
+class Solution:
     def first_time(self, numbers, target):
+        """
+        solve this issue at first time.
+        :param numbers:
+        :param target:
+        :return:
+        """
         d = {}
         for i in range(len(numbers)):
             n = target - numbers[i]
@@ -39,6 +47,8 @@ class Solution():
             else:
                 return [d[numbers[i]]+1, i+1]
 
+    def two_sum(self, number, target):
+        pass
 
 
 def main():
@@ -50,6 +60,7 @@ def main():
     # res = s.first_time(numbers, target)
     res = s.online1(numbers, target)
     print('The res = {}'.format(res))
+
 
 if __name__ == '__main__':
     main()

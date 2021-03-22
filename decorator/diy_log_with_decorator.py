@@ -1,6 +1,7 @@
 """
 Reference:
     - https://medium.com/@serge45497/python-%E4%B8%AD%E7%9A%84-decorator-%E8%AA%9E%E6%B3%95%E7%B3%96-3f9279f43d2b
+    - https://foofish.net/python-decorator.html
 
 # 裝飾器返回是一個function或class，作用就是為已存在的object添加額外功能
 """
