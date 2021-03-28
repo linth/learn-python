@@ -7,28 +7,37 @@ Goal: using `getattr`, `hasattr`, `setattr`, `delattr`, `__getattribute__`
 - object.__getattribute__(attr)
 """
 
+
 class Person:
-    def __init__(self, name, age):
+    def __init__(self, name, age, h, w):
         self.name = name
         self.age = age
         self.gender = None
+        self.height = h
+        self.weight = w
+
+    def bmi(self):
+        return self.weight / ((self.height/100) ** 2)
 
 
 class Woman(Person):
-    def __init__(self, name, age):
-        super().__init__(name, age)
+    def __init__(self, name, age, h, w):
+        super().__init__(name, age, h, w)
         self.gender = 'girl'
+
+    def bmi(self):
+        return f"woman cannot provide the value of bmi."
 
 
 class Man(Person):
-    def __init__(self, name, age):
-        super().__init__(name, age)
+    def __init__(self, name, age, h, w):
+        super().__init__(name, age, h, w)
         self.gender = 'boy'
-
+        
 
 if __name__ == '__main__':
-    m = Man('george', 30)
-    print(f"the name of man: {getattr(m, 'name')}, the age of man: , {getattr(m, 'age')}")
+    m = Man('george', 30, 178, 75)
+    print(f"the name of man: {getattr(m, 'name')}, the age of man: , {getattr(m, 'age')}, bmi: {m.bmi()}")
 
     # hasattr
     print('hasattr: ', hasattr(m, 'name'), hasattr(m, 'gender'), hasattr(m, 'age'))
@@ -48,6 +57,6 @@ if __name__ == '__main__':
     except Exception as e:
         print(f'the error: ', e)
     
-    w = Woman('may', 40)
-    print(f'the name of woman: {w.name}, the age: {w.age}, the gender: {w.gender}')
+    w = Woman('may', 40, 155, 48)
+    print(f'the name of woman: {w.name}, the age: {w.age}, the gender: {w.gender}, bmi: {w.bmi()}')
     print(f"we want to get the attribute of w object: {w.__getattribute__('name')}")
