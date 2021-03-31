@@ -33,7 +33,7 @@ class Man(Person):
     def __init__(self, name, age, h, w):
         super().__init__(name, age, h, w)
         self.gender = 'boy'
-        
+
 
 if __name__ == '__main__':
     m = Man('george', 30, 178, 75)
