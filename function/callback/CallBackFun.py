@@ -7,24 +7,33 @@ The point at which other function calls our callback function depends on the req
 
 Callback Functions are generally used with asynchronous functions.
 
+何謂callback function，在google找到一篇相關的解釋
+簡單的說，如果你使用了某個function，那麼你就是『call』了一個function。
+如果系統或是函式是要求你給一個function pointer，這個function pointer指到一個實際的函式(多半這個函式是你自己寫的)。
+然後它會在適當的時間呼叫此function，則此function就是所謂的 callback function。因為這個function是被『callback』了。
+
+
 Reference
     - https://pythonexamples.org/python-callback-function/
+    - https://ithelp.ithome.com.tw/articles/10006207
 """
 import time
 
 
-def callback_function(s):
-    # time.sleep(2)
-    print(f'length of the text file is : {s}')
+def callback_function1(num: int) -> None:
+    print(f'callback function 1: length of the text file is : {num}')
 
 
-def print_file_length(path, callback):
+def callback_function2(num: int) -> None:
+    print(f'callback function 2: length of the text file is : {num}')
+
+
+def print_file_length(path: str, callback):
     print(f'Go Into print_file_length function....')
     f = open(path, 'r')
     length = len(f.read())
     f.close()
     print(f'close the file....')
-    # time.sleep(1)
     callback(length)
 
 
@@ -34,9 +43,10 @@ s = [
 ]
 
 
-def callback_search_name(name):
+def callback_search_name(name: str):
     for i in s:
         if i['name'] == name:
+            time.sleep(3)
             return i
     return None
 
@@ -51,6 +61,8 @@ def small_task(name: str):
 
 
 if __name__ == '__main__':
-    # print_file_length('sample.txt', callback_function)
+    print_file_length('sample.txt', callback_function1)
+    print_file_length('sample.txt', callback_function2)
 
-    small_task('george')
+    # small_task('george')
+    # small_task('aa') # not found.
