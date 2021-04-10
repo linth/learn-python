@@ -1,6 +1,8 @@
 """
 Goal: using `getattr`, `hasattr`, `setattr`, `delattr`, `__getattribute__`
 
+This is handling for object.
+
 - getattr(object, attr)
 - setattr(object, attr, value)
 - delattr(object, attr)
