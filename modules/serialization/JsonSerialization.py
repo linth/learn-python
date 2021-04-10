@@ -87,6 +87,7 @@ if __name__ == '__main__':
     # pickle example
     # #####################################
     # object => bytes.
+    # TODO: check the meaning for bytes.
     o2b = object_to_bytes(d)
     print(f'result: {o2b}; the type: {type(o2b)}')
 
