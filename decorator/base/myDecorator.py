@@ -1,4 +1,7 @@
+"""
+基本的裝飾器寫法
 
+"""
 
 def myDeco(callback):
 
