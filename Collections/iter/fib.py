@@ -24,8 +24,17 @@ class fib:
         self.prev = value
         return value
     
+def fib2(n):
+    # Fibonacci sequence
+    if n <= 2:
+        return 1
+    else:
+        return fib2(n-2) + fib2(n-1)
     
 if __name__ == '__main__':
     f = fib()
     fib_list = list(islice(f, 0, 10))
     print(fib_list) # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+    
+    
+    print(fib2(5))
