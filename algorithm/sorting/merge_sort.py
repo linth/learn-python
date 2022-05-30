@@ -9,6 +9,7 @@ Merge sorting (合併排序法)
 Reference:
     - https://www.tutorialspoint.com/python_data_structure/python_sorting_algorithms.htm#
     - https://www.youtube.com/watch?v=C9Xes8wH6Co&t=125s
+    - https://www.geeksforgeeks.org/python-program-for-merge-sort/
 """
 
 def merge_sort(unsorted_list):
@@ -31,6 +32,7 @@ def merge_sort(unsorted_list):
 def merge(left_half, right_half):
     res = []
     
+    # 如果兩個 list 都尚未結束，則逐步將 left_half/right_half 刪除並增加到 res
     while len(left_half) != 0 and len(right_half) != 0:
         if left_half[0] < right_half[0]:
             res.append(left_half[0])
