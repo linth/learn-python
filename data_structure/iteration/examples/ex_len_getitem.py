@@ -10,31 +10,34 @@ from datetime import timedelta
 from datetime import date
 
 
-''' 說明此 class 建立時，可提供 object 使用迭代方法來進行。 '''
-class DateRangeIterable:
-    def __init__(self, start_date, end_date):
+class DateRangeSequence:
+    
+    def __init__(self, start_date, end_date): 
         self.start_date = start_date
         self.end_date = end_date
-        self._present_day = start_date
+        self._range = self._create_range()
         
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self._present_day >= self.end_date:
-            raise StopIteration()
-        
-        today = self._present_day
-        self._present_day += timedelta(days=1)
-        return today
+    def _create_range(self):
+        days = []
+        current_day = self.start_date
+        while current_day < self.end_date:
+            days.append(current_day)
+            current_day += timedelta(days=1)
+        return days
     
+    def __getitem__(self, day_no):
+        return self._range[day_no]
+    
+    def __len__(self):
+        return len(self._range)
     
 if __name__ == '__main__':
-    dr = DateRangeIterable(
-        date(2022, 5, 28),
+    dr = DateRangeSequence(
+        date(2022, 5, 20),
         date(2022, 6, 3)
     )
     
     for day in dr:
         print(day)
+    
     
