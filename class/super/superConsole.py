@@ -1,6 +1,8 @@
 '''
 super() 可以承接父類別的相關屬性資料，或是可以覆寫method來修改功能
-
+    - super().__init__(arg_1, arg_2)
+    - object.__init__(self, arg_1, arg_2)
+    
 References:
     - https://realpython.com/python-super/
 '''
@@ -21,7 +23,11 @@ class Rectangle:
 # TODO: Here we declare that the square class inherits from the Rectangle class.
 class Square(Rectangle):
     def __init__(self, length):
+        # super() 寫法
         super().__init__(length, length)
+        
+        # 另一種寫法
+        # Rectangle.__init__(self, length, length)
 
 
 class Cube(Square):
