@@ -18,10 +18,11 @@ from abc import ABC, abstractmethod
 
 
 ''' 增加 abstract, interface class 來進行抽象化，讓流程方法都依賴抽象。 '''
-class IPayment(ABC):    
-    @abstractmethod # 抽象化的 function，都要增加 @abstractmethod
+class IPayment(ABC):
+    
+    @abstractmethod
     def pay(self):
-        return NotImplementedError('IPayment\'s pay() must be overridden.')
+        pass
 
 
 class Payment:

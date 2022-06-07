@@ -15,6 +15,9 @@ Reference:
 '''
 
 class Payment:
+    def __init__(self):
+        pass
+    
     def pay(self, creditCard: CreditCard):
         creditCard.pay()
     
