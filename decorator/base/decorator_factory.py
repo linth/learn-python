@@ -1,7 +1,11 @@
 """
-裝飾器工廠的基本寫法
+裝飾器工廠的基本寫法:
 
 如果使用裝飾器工廠，則裝飾器需要 ＠myFactory()
+
+
+Reference:
+    - https://www.twblogs.net/a/5cfdeb82bd9eee14029ec1fa
 """
 
 def myFactory(base):

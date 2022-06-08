@@ -4,7 +4,7 @@ decorator 一般模板
 
 '''
 
-def decorator(fun):
+def decorator(fun, *arg, **kwargs):
     ''' 第一層裝飾器名稱 '''
     
     def wrapper(*args, **kwargs):
@@ -17,10 +17,11 @@ def decorator(fun):
         # 從這裡增加程式碼
     return wrapper
 
+@decorator
 def show_hello():
     print('hello')
 
 
 if __name__ == '__main__':
-    decorator(show_hello())
+    show_hello()
     
