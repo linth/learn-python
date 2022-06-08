@@ -9,7 +9,6 @@ Reference:
 '''
 
 def cal_number():
-    
     # local variable.
     x = 100
     

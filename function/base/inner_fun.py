@@ -4,6 +4,10 @@ Inner function:
     - inner function 有點類似 decorator
     - 需要知道閉包 (closures) 觀念
 
+結論:
+    - inner function 無法修改 global variable
+    - inner function 如果要修改 outside function 則需要使用 nonlocal
+
 References:
     - https://realpython.com/primer-on-python-decorators/
     - https://pythonexamples.org/python-inner-functions/
@@ -14,28 +18,19 @@ def outside_function(txt):
     text = txt
     
     def inner_function():
+        name = 'inner function.'
+        x = 10
+        # inner function 可以抓取外部變數
         print('text', text)
         
     inner_function()
     
+    # 外部函數無法抓取 inner function.
+    # print(name)
+    
 
 def function():
-    """
-    Working of Inner Functions:
-        Following is the step by step execution of the above program.
-
-        1. Define function().
-        2. Call function().
-        3. Execute print('Inside the function.').
-        4. Define innerFunction1().
-        5. Define innerFunction2().
-        6. Call innerFunction1().
-        7. Execute print('Inner function 1.').
-        8. Call innerFunction1().
-        9. Execute print('Inner function 2.').
-
-    :return:
-    """
+    
     print(f'inside the function...')
 
     def inner_function1():
@@ -49,11 +44,7 @@ def function():
 
 
 def IeJob(num):
-    """
-    可以使用在 function-based api 應用程式上面。
-    :param num:
-    :return:
-    """
+    
     print(f'Go into the IeJob() function...')
 
     def print_hello():
@@ -103,4 +94,10 @@ if __name__ == '__main__':
     print(f'input value: {res[0]}; the result: {res[1]}')
     
     print('------------------------')
-    outside_function('hi, everyone.')
+    outf = outside_function('hi, everyone.')
+    
+    # 可以使用 dir 查詢的函數資訊 
+    print(dir(outf))
+    
+    # 若想知道閉包儲存多少物件，可以印出__closure__屬性查看資訊，__closure__會是一個唯讀屬性；印出的資料型態是tuple。
+    # TODO: 似乎沒有此 function. 
