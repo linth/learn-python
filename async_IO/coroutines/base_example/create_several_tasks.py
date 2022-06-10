@@ -14,11 +14,11 @@ async def print_after(delay, what):
 
 
 async def main():
-    
+    # 任務1
     task1 = asyncio.create_task(
         print_after(1, 'hello')
     )
-    
+    # 任務2
     task2 = asyncio.create_task(
         print_after(2, 'world')
     )

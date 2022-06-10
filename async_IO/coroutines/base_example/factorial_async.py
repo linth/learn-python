@@ -1,5 +1,6 @@
 '''
 階乘 factorial 搭配使用 async 來執行
+    - 使用 gather() 來併發多個任務
 
 Reference:
     - https://docs.python.org/zh-tw/3/library/asyncio-task.html
