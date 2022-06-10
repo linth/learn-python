@@ -104,5 +104,24 @@ SRP與ISP設計角度差異:
 
 
 ---
+## **迪米特法則 (Law of Demeter)**
+    - 各單元對其他單元所知應當有限：只瞭解與目前單元最相關之單元。
+    - 就是一個類別，對自己需要呼叫或耦合的類別不需要知道的太多，只需要知道該類別提供的public方法，不需要知道內部的實作。
+
+4種含意:
+    - 只和朋友交流 Only talk to your immediate friends
+    - 朋友間也應該有距離
+        - 是否還可以再减少public方法和屬性
+        - 是否可以修改為private、package、protected等權限
+        - 是否可以加上final關鍵字。
+    - 是自己的就是自己的
+        - 一個方法，放在本類別沒問題，但放在其他類別也不會出錯。
+    - 謹慎使用Serializable
+        - 若使用不當，未來修改屬性，序列化時會拋異常NotSerializableException。
+
+
+https://ithelp.ithome.com.tw/articles/10237285
+
+---
 ## Reference:
     - https://ithelp.ithome.com.tw/articles/10235629
