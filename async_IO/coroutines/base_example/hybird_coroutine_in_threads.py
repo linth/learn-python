@@ -43,6 +43,7 @@ async def main():
     await asyncio.gather(
         asyncio.to_thread(blocking_io),
         asyncio.to_thread(show_hello),
+        asyncio.to_thread(show_hello),
         # asyncio.sleep(1)
         asyncio.create_task(show_world())
     )
@@ -53,3 +54,15 @@ async def main():
     
 
 asyncio.run(main())
+
+'''
+start main at 1654847279.8828802
+world
+start blocking_io at 1654847279.8858826
+hello
+hello
+blocking_io complete at 1654847282.8901618
+total time: 3.004279136657715
+finished main at 1654847282.8901618
+total time: 3.007281541824341
+'''
