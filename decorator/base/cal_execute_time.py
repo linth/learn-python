@@ -1,8 +1,10 @@
-"""
+'''
 思考可以使用裝飾器來提供函式的執行所需時間？
     - 單純裝飾器
     - 使用裝飾器工廠
-"""
+    
+TODO: 可以參考 timeit library 來測試學習
+'''
 import time
 
 def spend_how_much_time(callback):
