@@ -46,9 +46,9 @@ def scrap(mw=5):
             try:
                 data = future.result()
             except Execption as exc:
-                print('%r generated an exception: %s' % (url, exc))
+                print(f'\'{url}\' generated an exception: {exc}')
             else:
-                print('%r page length is %d' % (url, len(data)))
+                print(f'\'{url}\' page length is {len(data)}')
  
  
 def main():
@@ -56,9 +56,9 @@ def main():
         try:
             data = get_content(url)
         except Exception as exc:
-            print('%r generated an exception: %s' % (url, exc))
+            print(f'\'{url}\' generated an exception: {exc}')
         else:
-            print('%r page length is %d' % (url, len(data)))
+            print(f'\'{url}\' page length is {len(data)}')
  
  
 if __name__ == '__main__':
