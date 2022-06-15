@@ -13,11 +13,20 @@ def add(n1, n2, cb):
 
 
 def handle(result):
+    # use english to show your result.
     print('result', result)
     
     
-if __name__ == '__main__':
-    add(4, 3, handle)
+def handle2(result):
+    print('結果是', result)
     
+    
+    
+if __name__ == '__main__':
+    
+    add(4, 3, handle)
     add(5, 6, handle)
+    
+    add(4, 3, handle2)
+    add(5, 6, handle2)
     
