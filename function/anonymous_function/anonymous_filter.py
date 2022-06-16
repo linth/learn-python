@@ -9,15 +9,19 @@ lambda程式撰寫方式：
 
 map程式撰寫方式：
     - map(function, iterable(s))
+    - 抓取符合的元素。
 
 filter程式撰寫方式：
     - filter(function, iterable(s))
+    - 用來過濾序列，過濾掉不符合的元素。
 
 reduce程式撰寫方式：
     - reduce(function, sequence[, initial])
-
+    - 對序列中元素進行累加
+    
 Reference:
     - https://stackabuse.com/map-filter-and-reduce-in-python-with-examples/
+    - https://www.runoob.com/python/python-func-filter.html
 """
 
 fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
@@ -34,14 +38,19 @@ def is_larger_then_five(l):
         return True
     else:
         return False
-            
+
+# ##################
+# 過濾掉不符合的元素
+# ##################
 res = filter(is_even, a)
 print(list(res)) # [2, 4, 6, 8]
 
 res2 = filter(is_larger_then_five, a)
 print(list(res2)) # [6, 7, 8, 9]
 
-# 使用 lambda function
+# ###################################
+# 使用 lambda function + filter 方式
+# ###################################
 res3 = filter(lambda l : True if l % 2 == 0 else False, a)
 print(list(res3)) # [2, 4, 6, 8]
 
