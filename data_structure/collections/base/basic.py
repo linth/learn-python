@@ -1,6 +1,7 @@
 """
 Reference:
     - https://docs.python.org/zh-tw/3/library/collections.html
+    - https://www.geeksforgeeks.org/python-collections-module/
 """
 from collections import ChainMap, namedtuple
 
