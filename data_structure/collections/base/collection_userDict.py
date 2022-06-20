@@ -20,6 +20,6 @@ class CustomDict(UserDict):
     
     
 d = CustomDict({'a':1, 'b': 2, 'c': 3})
-
-d.pop(1)
+print(d)
+d.pop(1) # RuntimeError: deleteion not allowed.
 
