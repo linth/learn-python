@@ -7,6 +7,8 @@
 '''
 from collections import UserList
 
+
+# 不好的範例
 class BadList(list):
     def __getitem__(self, index):
         value = super().__getitem__(index)
@@ -19,6 +21,7 @@ class BadList(list):
         return f'[{prefix}] {value}'
     
 
+# 好的範例
 class GoodList(UserList):
     def __getitem__(self, index):
         value = super().__getitem__(index)
