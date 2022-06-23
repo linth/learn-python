@@ -57,3 +57,23 @@
 請參考 7_consider_critical_section.py
 ```
 
+
+---
+
+## 名詞差異
+
+英文        台灣            中國
+Process     行程、程序      進程
+
+
+英文        台灣            中國
+Thread      執行續          線程
+
+
+英文        台灣            中國
+coroutine   共常式?         協程
+
+
+## Reference:
+    - https://leovan.me/cn/2021/04/process-thread-and-coroutine-theory/
+    - https://zh.wikipedia.org/zh-tw/%E5%8D%8F%E7%A8%8B
