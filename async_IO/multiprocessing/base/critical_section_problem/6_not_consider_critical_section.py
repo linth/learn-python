@@ -1,7 +1,6 @@
 '''
-銀行帳號範例: (有考慮 critical section problem...)
+銀行帳號範例: (當使用 multi-threading 時，沒考慮critical section問題)
     - 使用 100 threads 對同一個銀行帳戶轉帳，在沒保護的情狀下，我們有可能會得到錯誤結果。
-    - 請注意如果有執行 thread 時候，且變數有可能會相互影響，需要考慮 lock 問題。
     
 
 臨界區段（Critical section）指的是一個存取共用資源（例如：共用裝置或是共用記憶體）的程式片段，而這些共用資源有無法同時被多個執行緒存取的特性。
@@ -12,33 +11,22 @@ Reference:
     - https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B.md
 '''
 from time import sleep
-from threading import Thread, Lock
+from threading import Thread
 
 
 class Account(object):    
     def __init__(self):
         self._balance = 0
-        self._lock = Lock() # 需定義一個 lock 變數
         
     def deposit(self, money):
+        # 計算存款後的餘額
+        new_balance = self._balance + money
         
-        # 需要先獲取 lock 才能執行後續
-        self._lock.acquire()
+        # 模擬存款業務需要 0.01 秒時間
+        sleep(0.01) # 需要使用此行，因為正常會有可能因 interrupt 造成資料不一致狀況發生。
         
-        try:
-            # 計算存款後的餘額
-            new_balance = self._balance + money
-        
-            # 模擬存款業務需要 0.01 秒時間
-            sleep(0.01)
-        
-            # 修改帳戶餘額
-            self._balance = new_balance
-        except Exception as e:
-            print(e)
-        finally:
-            # 在 finally 中執行釋放鎖操作，確保保證發生異常的鎖都能釋放。
-            self._lock.release()
+        # 修改帳戶餘額
+        self._balance = new_balance
         
     @property
     def balance(self):

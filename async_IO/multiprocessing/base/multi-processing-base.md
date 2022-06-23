@@ -42,5 +42,18 @@
 
 ---
 
+[問題] 為什麼當使用 threading 時候，會需要考慮到 critical section?
 
+臨界區段（Critical section）指的是一個存取共用資源（例如：共用裝置或是共用記憶體）的程式片段，而這些共用資源有無法同時被多個執行緒存取的特性。
+    - Synchronization 同步問題
+
+## 沒考慮 Critical section 範例
+```
+請參考 6_not_consider_critical_section.py
+```
+
+## 有考慮 Critical section 範例
+```
+請參考 7_consider_critical_section.py
+```
 
