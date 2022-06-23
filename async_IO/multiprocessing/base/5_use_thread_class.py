@@ -1,5 +1,5 @@
 '''
-downloading file 範例:
+downloading file 範例: (使用 multi-thread class寫法)
     - 使用兩個下載任務，有使用 multi-thread，任務會放到不同的 thread 中同時啟動，總共耗費時間將會是某項最長結果。
     - 請跟 use_multi-processing 範例進行比較。
     - 此範例使用兩個 thread 來執行，以及各實作 class-based and function-based 方式。
@@ -28,7 +28,7 @@ class DownloadTask(Thread):
     def __init__(self, filename):
         super().__init__()
         self._filename = filename
-        
+
     def run(self):
         print(f'start downloading... {self._filename}')
         time_to_download = randint(5, 10)
@@ -36,43 +36,21 @@ class DownloadTask(Thread):
         print(f'{self._filename} downloading finished! spend {time_to_download} time.')
 
 
-# 使用 function-based 寫法
-def download_task(filename):
-    print(f'start downloading... {filename}')
-    time_to_download = randint(5, 10)
-    sleep(time_to_download)
-    print(f'{filename} downloading finished! spend {time_to_download} time.')
-    
 
 # class-based 寫法
 @cal_spend_time
 def main_class_based():
     t1 = DownloadTask('Python.pdf')
     t1.start()
-    
+
     t2 = DownloadTask('Peking Hot.avi')
     t2.start()
-    
+
     t1.join()
     t2.join()
-    
 
-# function-based 寫法    
-@cal_spend_time
-def main():    
-    p1 = Thread(target=download_task, args=('Python.pdf', ))
-    p1.start()
-    
-    p2 = Thread(target=download_task, args=('Peking Hot.avi', ))
-    p2.start()
-    
-    p1.join()
-    p2.join()
-       
 
 if __name__ == '__main__':
     # class-based 寫法
     main_class_based()
     
-    # function-based 寫法
-    main()
