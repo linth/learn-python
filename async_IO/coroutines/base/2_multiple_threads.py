@@ -8,9 +8,6 @@ from threading import Thread
 import time
 
 
-counter = 0
-
-
 def print_cube(num):
     print(num * num * num)
 
