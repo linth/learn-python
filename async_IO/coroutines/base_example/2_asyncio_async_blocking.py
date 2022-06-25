@@ -38,9 +38,9 @@ async def main2():
 
 
 if __name__ == '__main__':
-    # 非同步函式執行
-    # asyncio.run(main1())
-    
+    # 非同步函式執行    
+    # 請注意 main1 跟 main2 之間的任務順序
+    # asyncio.run(main1())    
     asyncio.run(main2())
 
 
