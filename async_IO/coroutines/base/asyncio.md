@@ -6,3 +6,13 @@
     - 協程 (coroutine), 
     - 任務 
     - Future
+
+---
+
+## [A quick refresher on stacks and frames](https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1.html)
+在文章內，有詳細說明 call function 並 stack 依序進行順序。
+有效了解每個步驟的流程跟運作，值得參考。
+
+
+## Reference:
+    - https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1.html
