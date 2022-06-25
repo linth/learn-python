@@ -73,7 +73,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main() # 遠遠低於 100
+    main()
     
 
 
