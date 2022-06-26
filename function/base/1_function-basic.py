@@ -1,7 +1,7 @@
-"""
+'''
 function 內的 variable, arguments, *args (tuple), **kwarg 使用
 
-"""
+'''
 
 def add(x, y):
     return x + y
@@ -14,11 +14,11 @@ def add(*args):
     return sum
 
 
-def greeting(name: str) -> str:
+def greeting(name: str):
     return 'Hello ' + name
 
 
-def new_add(x: int, y: int) -> int:
+def new_add(x: int, y: int):
     """
     sum of two int numbers. please reference the function of add and compare with them.
     :param x:

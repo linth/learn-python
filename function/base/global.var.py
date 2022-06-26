@@ -18,14 +18,23 @@ Reference:
 '''
 
 # 全域變數
+from glob import glob
+
+
 x = 100
+print(id(x))
 
 def cal_number():
     global x
+    y = x
+    print(id(x))
+    print(id(y))
+    print('----')
 
-    # 區域變數
+    # 區域變數, x 已取代 global variable.
     x = 20
-    
+    print(id(x))
+        
     def show_global_var():
         print('1) inner x:', x+10)
         # print(id(x+10))
@@ -34,16 +43,19 @@ def cal_number():
         print('2) inner x:', global_var+10)
         # print(id(global_var+10))
         
-    show_global_var()
-    set_global_var(x)
+    show_global_var() # 30
+    set_global_var(x) # 30
     
-    print('out x', x)
-    
-    
+    print('out x', x) # 20
+    print(id(x))
+
+
 if __name__ == '__main__':
     cal_number()
     
-    print(x) # 全域變數
+    print('global', x) # 全域變數, 20
+    print(id(x))
+    
     
     ''' result:
     1) inner x: 30

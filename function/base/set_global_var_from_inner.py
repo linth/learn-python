@@ -11,6 +11,7 @@ Reference:
     - https://medium.com/tsungs-blog/python-%E4%BD%9C%E7%94%A8%E5%9F%9F%E8%88%87closure-%E9%96%89%E5%8C%85-18426536e25c
 
 '''
+x = 10
 
 def student():
     
@@ -26,11 +27,11 @@ def student():
         height += 1
         weight -= 1
         
-        print('height', height)
-        print('weight', weight)
-        print('inner', x + 10)
+        print('height', height) # 181
+        print('weight', weight) # 69
+        print('inner', x + 10) # 20
         
-    return show_information
+    return show_information # None
 
 if __name__ == '__main__':
     s = student()
