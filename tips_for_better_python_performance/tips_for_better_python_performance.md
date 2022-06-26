@@ -185,3 +185,4 @@ str2 = " ".join(["Hello", "World!", "Foo", "Bar", "Baz"])
 
 ## Reference
     - [15 Tips for Better Python Performance](https://scoutapm.com/blog/python-performance-tips)
+    - [Google Python 編碼規範指南](https://mp.weixin.qq.com/s?__biz=MzUxMjUxMzIwNA==&mid=2247483979&idx=1&sn=d00863bec881f6729f29d4b0f62ba1a9&chksm=f9620790ce158e86249e2a86a9ca6e2b731ea5a9c44ffc76c4a54668c699c9df8a30aa9bba25&scene=21#wechat_redirect)
