@@ -15,7 +15,7 @@
 reference: [DIP](https://medium.com/%E7%A8%8B%E5%BC%8F%E6%84%9B%E5%A5%BD%E8%80%85/%E4%BD%BF%E4%BA%BA%E7%98%8B%E7%8B%82%E7%9A%84-solid-%E5%8E%9F%E5%89%87-%E4%BE%9D%E8%B3%B4%E5%8F%8D%E5%90%91%E5%8E%9F%E5%89%87-dependency-inversion-principle-a74ca045d776)
 
 ## 3 - strategy pattern (策略模式)
-- 建立 abc class 並繼承抽象層產生不同 class，針對程式中有關於一些斷方法，進行不同的策略跟執行工作。
+- 建立 abc class 並繼承抽象層產生不同 class，針對程式中有關於一些判斷方法，進行不同的策略跟執行工作。
 - 使用 abc class 或是 interface class 進行依賴反向 (Dependency Inversion) 抽象層。
 **主要是執行前面兩項的原則，進行範例上的實例demo。**
 
