@@ -10,41 +10,53 @@ from Employee import Employee
 
 class TestEmployee(unittest.TestCase):
     
+    def set_up(self):
+        print('set up.')
+        self.emp_1 = Employee('Corey', 'Schafer', 50000)
+        self.emp_2 = Employee('Sue', 'Smith', 60000)
+        
+    def tear_down(self):
+        print('tear down.')
+        pass
+    
     def test_email(self):
-        emp_1 = Employee('Corey', 'Schafer', 50000)
-        emp_2 = Employee('Sue', 'Smith', 60000)
+        print('test eamil.')
+        self.emp_1 = Employee('Corey', 'Schafer', 50000)
+        self.emp_2 = Employee('Sue', 'Smith', 60000)
         
-        self.assertEqual(emp_1.email, 'Corey.Schafer@email.com')
-        self.assertEqual(emp_2.email, 'Sue.Smith@email.com')
+        self.assertEqual(self.emp_1.email, 'Corey.Schafer@email.com')
+        self.assertEqual(self.emp_2.email, 'Sue.Smith@email.com')
         
-        emp_1.first = 'John'
-        emp_2.first = 'Jane'
+        self.emp_1.first = 'John'
+        self.emp_2.first = 'Jane'
         
-        self.assertEqual(emp_1.email, 'John.Schafer@email.com')
-        self.assertEqual(emp_2.email, 'Jane.Smith@email.com')
+        self.assertEqual(self.emp_1.email, 'John.Schafer@email.com')
+        self.assertEqual(self.emp_2.email, 'Jane.Smith@email.com')
         
     def test_fullname(self):
-        emp_1 = Employee('Corey', 'Schafer', 50000)
-        emp_2 = Employee('Sue', 'Smith', 60000)
+        print('test fullname.')
+        self.emp_1 = Employee('Corey', 'Schafer', 50000)
+        self.emp_2 = Employee('Sue', 'Smith', 60000)
         
-        self.assertEqual(emp_1.fullname, 'Corey Schafer')
-        self.assertEqual(emp_2.fullname, 'Sue Smith')
+        self.assertEqual(self.emp_1.fullname, 'Corey Schafer')
+        self.assertEqual(self.emp_2.fullname, 'Sue Smith')
         
-        emp_1.first = 'John'
-        emp_2.first = 'Jane'
+        self.emp_1.first = 'John'
+        self.emp_2.first = 'Jane'
         
-        self.assertEqual(emp_1.fullname, 'John Schafer')
-        self.assertEqual(emp_2.fullname, 'Jane Smith')
+        self.assertEqual(self.emp_1.fullname, 'John Schafer')
+        self.assertEqual(self.emp_2.fullname, 'Jane Smith')
         
     def test_appply_raise(self):
-        emp_1 = Employee('Corey', 'Schafer', 50000)
-        emp_2 = Employee('Sue', 'Smith', 60000)
+        print('test apply raise.')
+        self.emp_1 = Employee('Corey', 'Schafer', 50000)
+        self.emp_2 = Employee('Sue', 'Smith', 60000)
         
-        emp_1.apply_raise()
-        emp_2.apply_raise()
+        self.emp_1.apply_raise()
+        self.emp_2.apply_raise()
         
-        self.assertEqual(emp_1.pay, 52500)
-        self.assertEqual(emp_2.pay, 63000)
+        self.assertEqual(self.emp_1.pay, 52500)
+        self.assertEqual(self.emp_2.pay, 63000)
     
         
 if __name__ == '__main__':
