@@ -5,6 +5,7 @@ set, get function in class.
 
 Reference:
     - https://www.runoob.com/python/python-func-property.html
+    - https://www.liaoxuefeng.com/wiki/1016959663602400/1017502538658208
 '''
 # 一般寫法 set, get 
 class C(object):
