@@ -28,7 +28,8 @@ class D(B, C):
 
 if __name__ == '__main__':
     d = D()
-    d.method4() # found it in class D.
-    d.method3() # found it in class B.
-    d.method2() # found it in class C.
-    d.method1() # found it in class A.
+    
+    d.method4() # D's method 4, found it in class D.
+    d.method3() # B's method 3, found it in class B.
+    d.method2() # C's method 2, found it in class C.
+    d.method1() # A's method 1, found it in class A.
