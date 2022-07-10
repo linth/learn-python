@@ -24,4 +24,4 @@ class A(SuperHelloMixin, HelloMixin):
 
 if __name__ == '__main__':
     a = A()
-    a.display()
+    a.display()    
