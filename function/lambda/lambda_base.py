@@ -15,6 +15,7 @@ Lambda function
 Reference:
     - https://medium.com/seaniap/python-lambda-%E5%87%BD%E5%BC%8F-7e86a56f1996
     - https://jianjiesun.medium.com/python%E7%AD%86%E8%A8%98-6-%E4%B8%89%E5%85%83%E9%81%8B%E7%AE%97%E5%AD%90-ternary-conditional-operator-72e200575e49
+    - https://juejin.cn/post/6988877471500206093
 """
 
 multiply = lambda x, y : x*y
