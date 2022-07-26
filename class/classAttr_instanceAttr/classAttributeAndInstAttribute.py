@@ -1,24 +1,25 @@
 """
-Class Attribute vs. Instance Attribute:
-1. Instance Attribute:
+Class Attribute (物件屬性) vs. Instance Attribute (實例屬性):
+1. Instance Attribute (實例屬性):
     - is an instance attribute defined inside the constructor.
     - is accessible as both a property of the class and as a property of objects, as it is shared between all of them.
-2. Class Attribute:
+2. Class Attribute (物件屬性):
     - is a class attribute defined outside the constructor.
 
 [Note] Class Attributes Mutate to Be Instance Attributes.
 
 Reference:
     - https://dzone.com/articles/python-class-attributes-vs-instance-attributes
+    - https://medium.com/georges-note-idea/python-class-attribute-vs-instance-attribute-%E8%A7%80%E5%BF%B5%E5%92%8C%E5%B7%AE%E7%95%B0-3e1bcbb3ec68
 """
 
 
 class ExampleClass(object):
-    # class attribute.
+    # class attribute. (定義在外面的稱為物件屬性)
     class_attr = 0
 
     def __init__(self, instance_attr):
-        # instance attribute.
+        # instance attribute. (定義在__init__()內的稱為實例屬性)
         self.instance_attr = instance_attr
 
 
