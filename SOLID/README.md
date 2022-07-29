@@ -1,7 +1,7 @@
 # SOLID 原則總結
 
 
-## **單一職責 (Single Responsibility Principle, SRP)**
+## **1. 單一職責 (Single Responsibility Principle, SRP)**
     - 一個類別只能有一個改變的原因
     - 實現高內聚，將不相關的程式碼移除，使得整體程式碼中的每個部分都與自己實作的功能相關。
 
@@ -16,7 +16,7 @@
 
 
 ---
-## **開放封閉 (Open-Close Principle, OCP)**
+## **2. 開放封閉 (Open-Close Principle, OCP)**
     - 軟體實體像是類別、模組和函式，應該只對延展開放，但對修改關閉。
     - 簡單來說，就是當系統需要被擴充時，應該藉由新增新的程式碼來擴充新功能，而非修改原本的程式碼來擴充新功能。
     - 擴充新功能應藉由新增新的程式碼，而非修改原本的程式碼
@@ -31,7 +31,7 @@
 
 
 ---
-## **里式替換 (Liskov Substitution Principle, LSP)**
+## **3. 里式替換 (Liskov Substitution Principle, LSP)**
     - LSP的定義為子類別可以擴充套件父類別的功能，但不改變父類別原有的功能，其中還包含以下4層含義。
     - 子類別必須完全實現父類別的方法
     - 子類別可以有自己的特性
@@ -49,7 +49,7 @@
 
     
 ---
-## **介面隔離 (Interface Segregation Principle, ISP)**
+## **4. 介面隔離 (Interface Segregation Principle, ISP)**
     - 客戶不應該被強迫依賴他們不使用的方法
     - 使用介面隔離，可以隔離區分不同的實作需求。
 
@@ -68,7 +68,7 @@ SRP與ISP設計角度差異:
     - 實現class間的低耦合。
 
 ---
-## **依賴反轉 (Dependency Inversion Principle, DIP)**
+## **5. 依賴反轉 (Dependency Inversion Principle, DIP)**
     - High-level modules should not depend on low-level modules. Both should depend on abstractions. (高層模組不應該依賴低層模組，兩者皆應依賴於抽象。)
     - Abstractions should not depend on details. Details should depend on abstractions. (抽象不應該依賴細節，細節應該依賴於抽象。)
     - 高層低層是相對關係，其實也就是呼叫者與被呼叫者。而細節指的是具體的實作，相較於抽象的穩定，細節的變化較多。
@@ -81,7 +81,7 @@ SRP與ISP設計角度差異:
 
 
 ---
-## **合成/聚合複用原則 (Composite/Aggregate Reuse Principle)**
+## **6. 合成/聚合複用原則 (Composite/Aggregate Reuse Principle)**
     - 盡量使用組合(contains-a)/聚合(has-a)方式來代替繼承(is-a)來達到重複使用的目的。
     - 主要目的在於當要重複使用套件時，應該先考慮使用組合/聚合的方式，其次才是繼承。
     - 而如果要使用繼承的話，則須符合里氏替換原則(LSP)
