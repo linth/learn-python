@@ -43,7 +43,7 @@ class D(object):
 
 c = C()
 c.set_x(1)
-print(c.get_x())
+print(c.get_x()) # 1
 
 d = D()
 print(d._z) # None
