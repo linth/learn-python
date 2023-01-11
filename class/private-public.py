@@ -28,5 +28,6 @@ if __name__ == '__main__':
     
     
     #! 雖然使用 __ 雙底線來保護資料，但依舊還是可以抓取。
-    print(a._A__z) 
-    print(a._A__y)
+    print(a._A__z) # 3
+    print(a._A__y) # 2
+
