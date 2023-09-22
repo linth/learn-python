@@ -11,3 +11,10 @@ DEBUG:root:The function: add is executing.
 DEBUG:root:The function: subtract is executing.
 DEBUG:root:The function: multiply is executing.
 DEBUG:root:The function: divide is executing.
+DEBUG:Calculating:the message should go to the log file.
+INFO:Calculating:So should this
+WARNING:Calculating:And this, too
+DEBUG:Calculating:The function: add is executing.
+DEBUG:Calculating:The function: subtract is executing.
+DEBUG:Calculating:The function: multiply is executing.
+DEBUG:Calculating:The function: divide is executing.
