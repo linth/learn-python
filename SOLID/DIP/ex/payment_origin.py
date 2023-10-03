@@ -13,19 +13,17 @@
 Reference:
     - https://ithelp.ithome.com.tw/articles/10236359
 '''
-
+class CreditCard:
+    def pay(self):
+        print(f'payment by credit card.')
+        
 class Payment:
     def __init__(self):
         pass
     
     def pay(self, creditCard: CreditCard):
         creditCard.pay()
-    
-
-class CreditCard:
-    def pay(self):
-        print(f'payment by credit card.')
-        
+              
         
 if __name__ == '__main__':
     cc = CreditCard()    
