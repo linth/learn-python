@@ -34,4 +34,8 @@ class PayPalPayment(IPayment):
 if __name__ == '__main__':
     ccp = CreditCardPayment()
     pp = PaymentProcessor(ccp)
-    pp.execute_payment(100)
+    pp.execute_payment(100) # paid $100 via credit card.
+    
+    ppp = PayPalPayment()
+    pp2 = PaymentProcessor(ppp)
+    pp2.execute_payment(50) # paid $50 via PayPal.
