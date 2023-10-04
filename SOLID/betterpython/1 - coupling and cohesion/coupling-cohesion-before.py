@@ -21,7 +21,7 @@ class VehicleRegistry:
 
 
 class Application:
-    def register_vehicle(self, brand: string):
+    def register_vehicle(self, brand):
         # create a registry instance
         registry = VehicleRegistry()
 
@@ -60,4 +60,10 @@ class Application:
 app = Application()
 app.register_vehicle("Volkswagen ID3")
 
-
+''' Result
+Registration complete. Vehicle information:
+Brand: Volkswagen ID3  
+Id: LFFYLXIGMRPE       
+License plate: LF-56-HV
+Payable tax: 700.
+'''
