@@ -1,6 +1,8 @@
 """
 Logging modules.
 
+TODO: 根據不同level給不同的顏色顯示
+
 Reference:
     - https://docs.python.org/zh-cn/3/howto/logging.html
     - https://www.youtube.com/watch?v=-ARI4Cz-awo&t=125s
