@@ -1,12 +1,20 @@
 """
 Logging modules.
 
-TODO: 根據不同level給不同的顏色顯示
-
 Reference:
     - https://docs.python.org/zh-cn/3/howto/logging.html
     - https://www.youtube.com/watch?v=-ARI4Cz-awo&t=125s
 """
+
+'''
+TODO: 
+1. 根據不同level給不同的顏色顯示。
+2. 可以根據不同的level, 存給不同的資料檔案。
+
+'''
+
+
+
 import logging
 
 
