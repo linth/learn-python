@@ -1,3 +1,10 @@
+'''
+paramiko ssh example.
+
+Reference:
+    - https://ithelp.ithome.com.tw/articles/10245205
+'''
+
 import paramiko
 
 
